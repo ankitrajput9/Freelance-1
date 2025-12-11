@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  background-color: #0f1113;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(15px); }
+  40% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-15px); }
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide 2s ease-in-out;
+}
+
+/* continuous left scroll */
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
