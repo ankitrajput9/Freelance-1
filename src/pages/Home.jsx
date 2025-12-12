@@ -10,14 +10,16 @@ const Home = () => {
       <section className="relative w-full h-screen overflow-hidden">
 
         {/* Background Video */}
-       <video
-  className="absolute top-0 left-0 w-full h-full object-cover -z-10 smooth-transform"
+    <video
+  className="absolute top-0 left-0 w-full h-full object-cover -z-10"
   src="/video/bg2.mp4"
   autoPlay
   loop
   muted
   playsInline
   preload="auto"
+  disablePictureInPicture
+  controls={false}
 ></video>
 
 
