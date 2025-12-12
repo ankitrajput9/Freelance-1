@@ -45,15 +45,15 @@ const Home = () => {
         {/* Gold Icon */}
         <div className="flex justify-center mb-6">
           <img 
-            src="/assets/gold-icon.png"
+            src="logo.png"
             alt="icon"
-            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-80"
+            className="w-12 h-12 rounded-full sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-80"
           />
         </div>
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-[0.12em] mb-8">
-          THEGEM PHOTO STUDIO
+         MAA VAISHNAVI ENTERTAINMENT
         </h1>
 
         {/* Tagline Box */}
