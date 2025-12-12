@@ -27,6 +27,7 @@ const Section3 = () => {
           {/* Original list */}
           {images.map((img, index) => (
             <img
+            //  loading="lazy"
               key={index}
               src={img}
               className="w-[300px] h-[350px] object-cover"
