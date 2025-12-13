@@ -1,9 +1,16 @@
 import React from 'react';
+import AboutSection1 from '../components/sections/AboutSection/AboutSection1';
+import AboutSection2 from '../components/sections/AboutSection/AboutSection2';
+import FounderSection from '../components/sections/AboutSection/FounderSection';
 
 const About = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      Abouttt
+    <div className="relative w-full min-h-screen overflow-hidden">
+     
+     <AboutSection1/>
+     <FounderSection/>
+     <AboutSection2/>
+ 
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import Gallerslider from '../components/sections/GallerySection/Gallerslider';
 
 const Gallery = () => {
   return (
     <div>
-      Gallery
+      <Gallerslider/>
     </div>
   );
 }

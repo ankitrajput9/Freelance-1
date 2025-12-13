@@ -35,8 +35,8 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 text-sm font-semibold">
-          {["/", "/about", "/portfolio", "/team", "/services", "/gallery", "/career", "/contact"].map((path, i) => {
-            const labels = ["HOME", "ABOUT", "PORTFOLIO", "TEAM", "SERVICES", "GALLERY", "CAREER", "CONTACT"];
+          {["/", "/about", "/services", "/gallery", "/career", "/contact"].map((path, i) => {
+            const labels = ["HOME", "ABOUT",  "SERVICES", "GALLERY", "CAREER", "CONTACT"];
             return (
               <NavLink
                 key={i}
@@ -61,8 +61,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-[#0f1113]/95 backdrop-blur-md border-t border-gray-700 p-6 space-y-4 text-center transition-all">
-          {["/", "/about", "/portfolio", "/team", "/services", "/gallery", "/career", "/contact"].map((path, i) => {
-            const labels = ["HOME", "ABOUT", "PORTFOLIO", "TEAM", "SERVICES", "GALLERY", "CAREER", "CONTACT"];
+          {["/", "/about",  "/services", "/gallery", "/career", "/contact"].map((path, i) => {
+            const labels = ["HOME", "ABOUT", "SERVICES", "GALLERY", "CAREER", "CONTACT"];
             return (
               <NavLink
                 key={i}
