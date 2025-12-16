@@ -5,9 +5,7 @@ import About from '../pages/About';
 import Career from '../pages/Career';
 import ContactUs from '../pages/ContactUs';
 import Gallery from '../pages/Gallery';
-import Portfolio from '../pages/Portfolio';
 import Services from '../pages/Services';
-import Team from '../pages/Team';
 
 const Approuters = () => {
   return (
@@ -18,9 +16,7 @@ const Approuters = () => {
         <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<ContactUs/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
-        <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/services" element={<Services/>}/>
-        <Route path="/team" element={<Team/>}/>
 </Routes>
     </div>
   );

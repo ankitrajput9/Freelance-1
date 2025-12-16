@@ -5,7 +5,7 @@ import FounderSection from '../components/sections/AboutSection/FounderSection';
 
 const About = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full py-20 min-h-screen overflow-hidden">
      
      <AboutSection1/>
      <FounderSection/>
