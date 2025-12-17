@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#0f1113] text-gray-300 pt-14 pb-8">
@@ -13,13 +13,12 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-            <li><a href="/" className="hover:text-[#d9c08f] transition">Home</a></li>
-            <li><a href="/about" className="hover:text-[#d9c08f] transition">About Us</a></li>
-            <li><a href="/portfolio" className="hover:text-[#d9c08f] transition">Portfolio</a></li>
-            <li><a href="/services" className="hover:text-[#d9c08f] transition">Services</a></li>
-            <li><a href="/gallery" className="hover:text-[#d9c08f] transition">Gallery</a></li>
-            <li><a href="/team" className="hover:text-[#d9c08f] transition">Team</a></li>
-            <li><a href="/contact" className="hover:text-[#d9c08f] transition">Contact Us</a></li>
+            <li><NavLink to="/" className="hover:text-[#d9c08f] transition">Home</NavLink></li>
+            <li><NavLink to="/about" className="hover:text-[#d9c08f] transition">About Us</NavLink></li>
+            <li><NavLink to="/services" className="hover:text-[#d9c08f] transition">Services</NavLink></li>
+            <li><NavLink to="/gallery" className="hover:text-[#d9c08f] transition">Gallery</NavLink></li>
+            <li><NavLink to="/career" className="hover:text-[#d9c08f] transition">Career</NavLink></li>
+            <li><NavLink to="/contact" className="hover:text-[#d9c08f] transition">Contact Us</NavLink></li>
           </ul>
         </div>
 
@@ -39,7 +38,7 @@ const Footer = () => {
           {/* Email */}
           <p>
             <a 
-              href="mailto:maavaishnavientertainments@gmail.com" 
+              to="mailto:maavaishnavientertainments@gmail.com" 
               className="hover:text-[#d9c08f] text-sm sm:text-base transition"
             >
               maavaishnavientertainments@gmail.com
@@ -49,7 +48,7 @@ const Footer = () => {
           {/* Phone */}
           <p className="mt-2">
             <a 
-              href="tel:+919407271262" 
+              to="tel:+919407271262" 
               className="hover:text-[#d9c08f] text-sm sm:text-base transition"
             >
               +91-9407271262
@@ -59,7 +58,7 @@ const Footer = () => {
           {/* WhatsApp */}
           <p className="mt-3">
             <a 
-              href="https://wa.me/919407271262"
+              to="https://wa.me/919407271262"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 flex items-center gap-2 text-sm sm:text-base transition"

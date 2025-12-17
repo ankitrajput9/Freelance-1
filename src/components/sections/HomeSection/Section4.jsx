@@ -1,76 +1,43 @@
 import React from 'react';
-
+  import {services} from "../../data/Data"
+import {useNavigate} from 'react-router';
 const Section4 = () => {
+    const navigate = useNavigate();
+    
   return (
     <div>
-       <section className="w-full py-16 sm:py-20 md:py-24 bg-[#0f1113] text-center text-white">
+         <section className="w-full py-20 bg-[#0f1113] text-white">
+      <h2 className="text-center text-[#d9c08f] text-3xl tracking-[0.15em] mb-4">
+        TYPE OF SERVICES
+      </h2>
+      <p className="text-center text-gray-400 mb-12">
+        Click any service to view full gallery
+      </p>
 
-        <h2 className="text-[#d9c08f] text-3xl sm:text-4xl tracking-[0.12em] font-light mb-4">
-          TYPE OF SERVICES
-        </h2>
-
-        <p className="text-gray-300 text-base sm:text-lg mb-10 tracking-wide px-4">
-          CHOOSE THE TYPE OF SERVICES YOU LIKE
-        </p>
-
-        <div className="max-w-4xl mx-auto text-gray-400 text-sm sm:text-base leading-7 mb-14 px-4">
-          Line Production is our core speciality. With highly skilled crews & world-class facilities,
-          we ensure top-quality production at reasonable cost in Bhopal and across Madhya Pradesh.
-        </div>
-
-        {/* Responsive Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
-
-          {/* CARD 1 */}
-          <div className="bg-[#1a1b1d] border border-gray-700 pb-6 shadow-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            onClick={() => navigate(`/works/${service.id}`)}
+            className="cursor-pointer bg-[#1a1b1d] rounded-2xl overflow-hidden shadow-lg hover:scale-[1.03] transition"
+          >
+            {/* Preview image */}
             <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-              className="w-full h-48 sm:h-56 md:h-64 object-cover opacity-80"
-              alt="Service"
+              src={service.images[0]}
+              alt={service.title}
+              className="h-56 w-full object-cover"
             />
-            <h3 className="text-lg sm:text-xl text-center font-semibold py-4 tracking-wider">
-              MAJOR SERVICES
-            </h3>
-            <ul className="text-gray-300 space-y-2 text-sm sm:text-base px-6">
-              <li>CITY</li><li>LOCATION</li><li>WEB SERIES</li><li>PROPERTIES</li>
-              <li>MOVIES</li><li>TV SERIAL</li><li>ADD SHOOT</li><li>BRCC CASTING</li><li>LIGHTS</li>
-            </ul>
-          </div>
 
-          {/* CARD 2 */}
-          <div className="bg-[#1a1b1d] border border-gray-700 pb-6 shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-              className="w-full h-48 sm:h-56 md:h-64 object-cover opacity-80"
-              alt="Service"
-            />
-            <h3 className="text-lg sm:text-xl text-center font-semibold py-4 tracking-wider">
-              PRODUCTION SUPPORT
-            </h3>
-            <ul className="text-gray-300 space-y-2 text-sm sm:text-base px-6">
-              <li>CITY</li><li>LOCATION</li><li>WEB SERIES</li><li>PROPERTIES</li>
-              <li>MOVIES</li><li>TV SERIAL</li><li>ADD SHOOT</li><li>BRCC CASTING</li><li>LIGHTS</li>
-            </ul>
-          </div>
+            {/* Small thumbnails */}
+           
 
-          {/* CARD 3 */}
-          <div className="bg-[#1a1b1d] border border-gray-700 pb-6 shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-              className="w-full h-48 sm:h-56 md:h-64 object-cover opacity-80"
-              alt="Service"
-            />
-            <h3 className="text-lg sm:text-xl text-center font-semibold py-4 tracking-wider">
-              FULL PROJECT HANDLING
+            <h3 className="text-center py-4 text-lg tracking-wide text-[#d9c08f]">
+              {service.title}
             </h3>
-            <ul className="text-gray-300 space-y-2 text-sm sm:text-base px-6">
-              <li>CITY</li><li>LOCATION</li><li>WEB SERIES</li><li>PROPERTIES</li>
-              <li>MOVIES</li><li>TV SERIAL</li><li>ADD SHOOT</li><li>BRCC CASTING</li><li>LIGHTS</li>
-            </ul>
           </div>
-
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
     </div>
   );
 }
