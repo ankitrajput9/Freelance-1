@@ -25,7 +25,7 @@ const Section4 = () => {
             <img
               src={service.images[0]}
               alt={service.title}
-              className="h-56 w-full object-cover"
+              className="h-56 w-full object-fit"
             />
 
             {/* Small thumbnails */}

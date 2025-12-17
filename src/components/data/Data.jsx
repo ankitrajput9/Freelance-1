@@ -60,7 +60,6 @@ export let services = [
       "/CityImg/city9.jpg",
       "/CityImg/city10.jpg",
       "/CityImg/city11.jpg",
-      "/CityImg/cit12.jpg",
       "/CityImg/city13.jpg",
       "/CityImg/city14.jpg",
       "/CityImg/city15.jpg",
