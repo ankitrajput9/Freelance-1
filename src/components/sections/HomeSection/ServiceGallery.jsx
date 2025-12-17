@@ -20,7 +20,7 @@ const ServiceGallery = () => {
             key={idx}
             src={img}
             alt="gallery"
-            className="w-full h-72 object-contain rounded-2xl hover:scale-105 transition"
+            className="w-full h-72 object-fit rounded-2xl hover:scale-105 transition"
           />
         ))}
       </div>
