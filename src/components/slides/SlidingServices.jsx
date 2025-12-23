@@ -17,28 +17,28 @@ const SlidingServices = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex(prev => (prev + 1) % services.length);
-    }, 2000); // 2 seconds
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="w-full py-20 bg-[#0f1113] text-center text-white overflow-hidden">
+    <section className="w-full py-20 bg-[#1A1A1A] text-center text-white overflow-hidden">
 
-      <h2 className="text-[#d9c08f] text-4xl tracking-[0.15em] font-light mb-10">
+      {/* Heading */}
+      <h2 className="text-4xl tracking-[0.15em] font-light mb-10 text-[#A5161B]">
         WHAT WE OFFER
       </h2>
 
-      {/* Sliding Text Box */}
+      {/* Sliding Text */}
       <div className="relative h-20 w-full flex justify-center items-center">
-
         <div
           key={index}
-          className="text-2xl font-light text-gray-200 transition-all duration-700 ease-out opacity-0 animate-fadeSlide"
+          className="text-2xl font-light transition-all duration-700
+                     ease-out opacity-0 animate-fadeSlide text-white"
         >
           {services[index]}
         </div>
-
       </div>
 
     </section>

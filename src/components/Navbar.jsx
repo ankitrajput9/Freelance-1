@@ -9,44 +9,55 @@ const Navbar = () => {
   // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const links = [
+    { path: "/", label: "HOME" },
+    { path: "/about", label: "ABOUT" },
+    { path: "/services", label: "SERVICES" },
+    { path: "/gallery", label: "GALLERY" },
+    { path: "/career", label: "CAREER" },
+    { path: "/contact", label: "CONTACT" },
+  ];
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
-      ${scrolled ? "backdrop-blur-md bg-[#0f1113]/40 shadow-lg" : "bg-[#0f1113]"}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
+        ${
+          scrolled
+            ? "backdrop-blur-md bg-[#1A1A1A]/80 shadow-lg"
+            : "bg-[#1A1A1A]"
+        }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <h1 className="text-xl text-white font-bold tracking-wide">
-          <img className="h-12 rounded-full" src="/logo.png" alt="Logo" />
-        </h1>
+        <img
+          className="h-12 rounded-full"
+          src="/logo.png"
+          alt="Logo"
+        />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 text-sm font-semibold">
-          {["/", "/about", "/services", "/gallery", "/career", "/contact"].map((path, i) => {
-            const labels = ["HOME", "ABOUT",  "SERVICES", "GALLERY", "CAREER", "CONTACT"];
-            return (
-              <NavLink
-                key={i}
-                to={path}
-                className={({ isActive }) => (isActive ? "text-[#d9c08f]" : "text-white")}
-              >
-                {labels[i]}
-              </NavLink>
-            );
-          })}
+        <div className="hidden md:flex gap-6 text-sm font-semibold tracking-wide">
+          {links.map(({ path, label }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#A5161B]"
+                  : "text-white hover:text-[#A5161B] transition"
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </div>
 
         {/* Mobile Menu Icon */}
@@ -60,20 +71,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#0f1113]/95 backdrop-blur-md border-t border-gray-700 p-6 space-y-4 text-center transition-all">
-          {["/", "/about",  "/services", "/gallery", "/career", "/contact"].map((path, i) => {
-            const labels = ["HOME", "ABOUT", "SERVICES", "GALLERY", "CAREER", "CONTACT"];
-            return (
-              <NavLink
-                key={i}
-                to={path}
-                onClick={() => setOpen(false)}
-                className="block text-white hover:text-[#d9c08f] transition"
-              >
-                {labels[i]}
-              </NavLink>
-            );
-          })}
+        <div className="md:hidden bg-[#000000] border-t border-[#E6E6E6]
+                        p-6 space-y-4 text-center backdrop-blur-md">
+          {links.map(({ path, label }) => (
+            <NavLink
+              key={path}
+              to={path}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block text-[#A5161B]"
+                  : "block text-white hover:text-[#A5161B] transition"
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </div>
       )}
     </div>

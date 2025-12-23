@@ -1,34 +1,35 @@
 import React from "react";
 import { NavLink } from "react-router";
+
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0f1113] text-gray-300 pt-14 pb-8">
+    <footer className="w-full bg-[#1A1A1A] text-[#E6E6E6] pt-14 pb-8">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="text-[#d9c08f] text-lg sm:text-xl font-semibold mb-4">
+          <h3 className="text-[#A5161B] text-lg sm:text-xl font-semibold mb-4">
             QUICK LINKS
           </h3>
 
-          <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-            <li><NavLink to="/" className="hover:text-[#d9c08f] transition">Home</NavLink></li>
-            <li><NavLink to="/about" className="hover:text-[#d9c08f] transition">About Us</NavLink></li>
-            <li><NavLink to="/services" className="hover:text-[#d9c08f] transition">Services</NavLink></li>
-            <li><NavLink to="/gallery" className="hover:text-[#d9c08f] transition">Gallery</NavLink></li>
-            <li><NavLink to="/career" className="hover:text-[#d9c08f] transition">Career</NavLink></li>
-            <li><NavLink to="/contact" className="hover:text-[#d9c08f] transition">Contact Us</NavLink></li>
+          <ul className="space-y-2 text-sm sm:text-base">
+            <li><NavLink to="/" className="hover:text-[#A5161B] transition">Home</NavLink></li>
+            <li><NavLink to="/about" className="hover:text-[#A5161B] transition">About Us</NavLink></li>
+            <li><NavLink to="/services" className="hover:text-[#A5161B] transition">Services</NavLink></li>
+            <li><NavLink to="/gallery" className="hover:text-[#A5161B] transition">Gallery</NavLink></li>
+            <li><NavLink to="/career" className="hover:text-[#A5161B] transition">Career</NavLink></li>
+            <li><NavLink to="/contact" className="hover:text-[#A5161B] transition">Contact Us</NavLink></li>
           </ul>
         </div>
 
         {/* CONTACT DETAILS */}
         <div>
-          <h3 className="text-[#d9c08f] text-lg sm:text-xl font-semibold mb-4">
+          <h3 className="text-[#A5161B] text-lg sm:text-xl font-semibold mb-4">
             CONTACT US
           </h3>
 
-          <p className="text-gray-400 text-sm sm:text-base mb-4 leading-relaxed">
+          <p className="text-sm sm:text-base mb-4 leading-relaxed">
             Plot No.120, Flat No. G-2, Park View Apartment,<br />
             Lala Lajpat Rai Society, Near Hanuman Mandir,<br />
             E-7 Arera Colony, Bhopal,<br />
@@ -37,9 +38,9 @@ const Footer = () => {
 
           {/* Email */}
           <p>
-            <a 
-              to="mailto:maavaishnavientertainments@gmail.com" 
-              className="hover:text-[#d9c08f] text-sm sm:text-base transition"
+            <a
+              href="mailto:maavaishnavientertainments@gmail.com"
+              className="hover:text-[#A5161B] transition"
             >
               maavaishnavientertainments@gmail.com
             </a>
@@ -47,9 +48,9 @@ const Footer = () => {
 
           {/* Phone */}
           <p className="mt-2">
-            <a 
-              to="tel:+919407271262" 
-              className="hover:text-[#d9c08f] text-sm sm:text-base transition"
+            <a
+              href="tel:+919407271262"
+              className="hover:text-[#A5161B] transition"
             >
               +91-9407271262
             </a>
@@ -57,11 +58,11 @@ const Footer = () => {
 
           {/* WhatsApp */}
           <p className="mt-3">
-            <a 
-              to="https://wa.me/919407271262"
+            <a
+              href="https://wa.me/919407271262"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-400 flex items-center gap-2 text-sm sm:text-base transition"
+              className="hover:text-[#A5161B] flex items-center gap-2 transition"
             >
               <span>💬</span> Chat on WhatsApp
             </a>
@@ -70,7 +71,7 @@ const Footer = () => {
 
         {/* MAP SECTION */}
         <div>
-          <h3 className="text-[#d9c08f] text-lg sm:text-xl font-semibold mb-4">
+          <h3 className="text-[#A5161B] text-lg sm:text-xl font-semibold mb-4">
             FIND OUR STUDIO
           </h3>
 
@@ -78,7 +79,7 @@ const Footer = () => {
             <iframe
               title="studio-map"
               src="https://www.google.com/maps?q=E-7%20Arera%20Colony%20Bhopal&output=embed"
-              className="w-full h-full rounded-xl border border-gray-700"
+              className="w-full h-full rounded-xl border border-[#E6E6E6]"
               allowFullScreen
               loading="lazy"
             ></iframe>
@@ -88,7 +89,7 @@ const Footer = () => {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="mt-10 text-center text-gray-500 border-t border-gray-700 pt-4 text-xs sm:text-sm">
+      <div className="mt-10 text-center border-t border-[#E6E6E6] pt-4 text-xs sm:text-sm">
         © {new Date().getFullYear()} Maa Vaishnavi Entertainments. All Rights Reserved.
       </div>
 

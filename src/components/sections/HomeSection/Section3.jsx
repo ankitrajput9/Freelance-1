@@ -7,10 +7,12 @@ const Section3 = () => {
   ];
 
   return (
-    <section className="w-full py-20 bg-[#0f1113] text-center text-white overflow-hidden">
+    <section className="w-full py-20 bg-[#1A1A1A] text-center text-white overflow-hidden">
 
       {/* Heading */}
-      <h2 className="text-[#d9c08f] text-4xl tracking-[0.15em] font-light mb-12">
+      <h2
+        className="text-4xl tracking-[0.15em] font-light mb-12 text-[#A5161B]"
+      >
         OUR BEST WORK!
       </h2>
 
@@ -19,15 +21,14 @@ const Section3 = () => {
 
         {/* Moving Track */}
         <div
-          className="flex whitespace-nowrap animate-scrollX"
+          className="flex whitespace-nowrap"
           style={{
-            animation: "scrollX 25s linear infinite", // adjust speed
+            animation: "scrollX 25s linear infinite",
           }}
         >
           {/* Original list */}
           {images.map((img, index) => (
             <img
-            //  loading="lazy"
               key={index}
               src={img}
               className="w-[300px] h-[350px] object-cover"
@@ -35,7 +36,7 @@ const Section3 = () => {
             />
           ))}
 
-          {/* Duplicate list (needed for seamless loop) */}
+          {/* Duplicate list (seamless loop) */}
           {images.map((img, index) => (
             <img
               key={`dup-${index}`}
