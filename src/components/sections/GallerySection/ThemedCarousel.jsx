@@ -38,11 +38,10 @@ const ThemedCarousel = ({ images, onReadMore }) => {
 
   return (
     <section
-      className="w-full bg-[#1A1A1A]
+      className="w-full bg-[#f7f7f7]
                  pt-28 sm:pt-20 md:pt-24
                  pb-16 sm:pb-20
-                 px-4 sm:px-6
-                 text-white"
+                 px-4 sm:px-6"
     >
       {/* Heading */}
       <h2 className="text-center text-[#A5161B] text-3xl sm:text-4xl tracking-[0.2em] mb-12">
@@ -66,13 +65,19 @@ const ThemedCarousel = ({ images, onReadMore }) => {
                     slideIdx * VISIBLE_CARDS + VISIBLE_CARDS
                   )
                   .map((img, i) => (
-                    <img
+                    <div
                       key={i}
-                      src={img}
-                      className="w-full h-60 object-contain rounded-xl"
-                      loading="lazy"
-                      alt=""
-                    />
+                      className="bg-white rounded-xl overflow-hidden
+                                 shadow-sm hover:shadow-lg transition"
+                    >
+                      <img
+                        src={img}
+                        className="w-full h-60 object-contain
+                                   hover:scale-[1.03] transition duration-300"
+                        loading="lazy"
+                        alt=""
+                      />
+                    </div>
                   ))}
               </div>
             ))}
@@ -83,8 +88,10 @@ const ThemedCarousel = ({ images, onReadMore }) => {
         <button
           onClick={prev}
           className="absolute left-0 top-1/2 -translate-y-1/2
-                     bg-[#000000]/70 text-[#A5161B]
-                     p-3 rounded-full"
+                     bg-white border border-[#ddd]
+                     text-[#A5161B]
+                     p-3 rounded-full shadow
+                     hover:bg-[#A5161B] hover:text-white transition"
         >
           <HiChevronLeft size={28} />
         </button>
@@ -92,8 +99,10 @@ const ThemedCarousel = ({ images, onReadMore }) => {
         <button
           onClick={next}
           className="absolute right-0 top-1/2 -translate-y-1/2
-                     bg-[#000000]/70 text-[#A5161B]
-                     p-3 rounded-full"
+                     bg-white border border-[#ddd]
+                     text-[#A5161B]
+                     p-3 rounded-full shadow
+                     hover:bg-[#A5161B] hover:text-white transition"
         >
           <HiChevronRight size={28} />
         </button>

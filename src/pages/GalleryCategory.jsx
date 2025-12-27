@@ -6,27 +6,41 @@ const GalleryCategory = () => {
   const category = galleryData.find((g) => g.id === id);
 
   if (!category) {
-    return <div className="text-white text-center py-20">Gallery not found</div>;
+    return (
+      <div className="text-[#111] text-center py-20">
+        Gallery not found
+      </div>
+    );
   }
 
   return (
-    <section className="min-h-screen bg-[#0f1113] text-white px-6 py-20">
+    <section className="min-h-screen bg-[#f7f7f7] text-[#111] px-6 py-20">
 
+      {/* Heading */}
       <h2 className="text-center text-4xl text-[#A5161B] tracking-widest mb-4">
         {category.title}
       </h2>
-      <p className="text-center text-gray-400 mb-12">
+
+      {/* Subheading */}
+      <p className="text-center text-[#666] mb-12">
         Selected visuals from our production portfolio
       </p>
 
+      {/* Images Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {category.images.map((img, idx) => (
-          <img
+          <div
             key={idx}
-            src={img}
-            alt={category.title}
-            className="w-full h-72 object-cover rounded-xl hover:scale-105 transition"
-          />
+            className="bg-white rounded-xl overflow-hidden
+                       shadow-sm hover:shadow-lg transition"
+          >
+            <img
+              src={img}
+              alt={category.title}
+              className="w-full h-72 object-cover
+                         hover:scale-105 transition duration-300"
+            />
+          </div>
         ))}
       </div>
 

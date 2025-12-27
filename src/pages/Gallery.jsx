@@ -32,13 +32,13 @@ const Gallery = () => {
         );
 
   return (
-    <section className="min-h-screen bg-[#0f1113] text-white px-6 py-20">
+    <section className="min-h-screen bg-[#f7f7f7] px-6 py-20">
 
       {/* Heading */}
-      <h1 className="text-center text-4xl tracking-widest text-[#A5161B] mb-4">
+      <h1 className="text-center text-4xl sm:text-5xl tracking-widest text-[#A5161B] mb-4">
         OUR WORK
       </h1>
-      <p className="text-center text-gray-400 mb-12">
+      <p className="text-center text-[#555] mb-12 text-sm sm:text-base">
         Explore our work across films, web series, ads & locations
       </p>
 
@@ -54,8 +54,8 @@ const Gallery = () => {
             className={`px-5 py-2 border text-sm tracking-wide transition
               ${
                 activeFilter === filter
-                  ? "bg-[#A5161B] border-[#A5161B]"
-                  : "border-gray-500 hover:border-[#A5161B]"
+                  ? "bg-[#A5161B] text-white border-[#A5161B]"
+                  : "bg-white text-[#333] border-[#ccc] hover:border-[#A5161B]"
               }`}
           >
             {filter}
@@ -64,20 +64,23 @@ const Gallery = () => {
       </div>
 
       {/* Category Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {filteredData.map((item) => (
           <div
             key={item.id}
             onClick={() => navigate(`/gallery/${item.id}`)}
-            className="cursor-pointer bg-black rounded-2xl overflow-hidden hover:scale-[1.03] transition"
+            className="cursor-pointer bg-white rounded-2xl overflow-hidden
+                       border border-[#ddd] shadow-sm
+                       hover:shadow-xl hover:-translate-y-1 transition-all"
           >
-            <img
-              src={item.images[0]}
-              alt={item.title}
-              className="h-64 w-full object-cover"
-            />
+         <img
+  src={item.images[0]}
+  alt={item.title}
+  className="w-full aspect-5/6 object-cover"
+/>
+
             <div className="p-4 text-center">
-              <h3 className="tracking-wide text-lg">
+              <h3 className="tracking-wide text-lg font-semibold text-[#111]">
                 {item.title}
               </h3>
             </div>

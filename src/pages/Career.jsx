@@ -18,11 +18,10 @@ const jobData = {
 const Career = () => {
   return (
     <section
-      className="w-full bg-[#1A1A1A]
+      className="w-full bg-[#f7f7f7]
                  pt-28 sm:pt-20 md:pt-24
                  pb-16 sm:pb-20
-                 px-4 sm:px-6
-                 text-white"
+                 px-4 sm:px-6"
     >
       <div className="max-w-4xl mx-auto">
 
@@ -35,22 +34,22 @@ const Career = () => {
         </h1>
 
         {/* JOB ALERT CARD */}
-        <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-8 shadow-xl">
+        <div className="bg-white border border-[#ddd] rounded-xl p-8 shadow-lg">
 
           <h2 className="text-2xl font-semibold mb-2 text-[#A5161B]">
             {jobData.title}
           </h2>
 
-          <p className="text-[#E6E6E6] mb-6">
+          <p className="text-[#555] mb-6">
             {jobData.company}
           </p>
 
           {/* OPENINGS */}
-          <h3 className="text-lg font-semibold mb-3 text-white">
+          <h3 className="text-lg font-semibold mb-3 text-[#111]">
             We Are Hiring:
           </h3>
 
-          <ul className="list-disc list-inside space-y-2 text-[#E6E6E6] mb-6">
+          <ul className="list-disc list-inside space-y-2 text-[#555] mb-6">
             {jobData.openings.map((role, index) => (
               <li key={index}>{role}</li>
             ))}
@@ -58,12 +57,12 @@ const Career = () => {
 
           {/* NOTE */}
           <div className="border-l-4 border-[#A5161B] pl-4 mb-6">
-            <p className="text-sm text-[#E6E6E6] leading-6 whitespace-pre-line">
+            <p className="text-sm text-[#555] leading-6 whitespace-pre-line">
               {jobData.note}
             </p>
           </div>
 
-          <p className="text-[#E6E6E6] mb-6 font-semibold">
+          <p className="text-[#111] mb-6 font-semibold">
             Hurry up guys!!!!!
           </p>
 
@@ -71,30 +70,30 @@ const Career = () => {
           <div className="space-y-3">
 
             {/* EMAIL */}
-            <p>
+            <p className="text-[#555]">
               <span className="font-semibold text-[#A5161B]">Email: </span>
               <a
                 href={`mailto:${jobData.email}`}
-                className="text-[#E6E6E6] hover:text-[#A5161B] transition break-all"
+                className="hover:text-[#A5161B] transition break-all"
               >
                 {jobData.email}
               </a>
             </p>
 
             {/* WHATSAPP */}
-            <p>
+            <p className="text-[#555]">
               <span className="font-semibold text-[#A5161B]">WhatsApp: </span>
               <a
                 href={`https://wa.me/${jobData.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
-                className="text-[#E6E6E6] hover:text-[#A5161B] transition"
+                className="hover:text-[#A5161B] transition"
               >
                 +91 9407271262
               </a>
             </p>
 
-            <p className="text-sm text-[#E6E6E6] mt-2">
+            <p className="text-sm text-[#666] mt-2">
               (Strictly no phone calls 📱 — WhatsApp only)
             </p>
 

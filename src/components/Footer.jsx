@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1A1A1A] text-[#E6E6E6] pt-14 pb-8">
+    <footer className="w-full bg-[#f7f7f7] text-[#111] pt-14 pb-8 border-t border-[#ddd]">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
@@ -13,7 +13,7 @@ const Footer = () => {
             QUICK LINKS
           </h3>
 
-          <ul className="space-y-2 text-sm sm:text-base">
+          <ul className="space-y-2 text-sm sm:text-base text-[#555]">
             <li><NavLink to="/" className="hover:text-[#A5161B] transition">Home</NavLink></li>
             <li><NavLink to="/about" className="hover:text-[#A5161B] transition">About Us</NavLink></li>
             <li><NavLink to="/services" className="hover:text-[#A5161B] transition">Services</NavLink></li>
@@ -29,7 +29,7 @@ const Footer = () => {
             CONTACT US
           </h3>
 
-          <p className="text-sm sm:text-base mb-4 leading-relaxed">
+          <p className="text-sm sm:text-base mb-4 leading-relaxed text-[#555]">
             Plot No.120, Flat No. G-2, Park View Apartment,<br />
             Lala Lajpat Rai Society, Near Hanuman Mandir,<br />
             E-7 Arera Colony, Bhopal,<br />
@@ -37,7 +37,7 @@ const Footer = () => {
           </p>
 
           {/* Email */}
-          <p>
+          <p className="text-[#555]">
             <a
               href="mailto:maavaishnavientertainments@gmail.com"
               className="hover:text-[#A5161B] transition"
@@ -47,7 +47,7 @@ const Footer = () => {
           </p>
 
           {/* Phone */}
-          <p className="mt-2">
+          <p className="mt-2 text-[#555]">
             <a
               href="tel:+919407271262"
               className="hover:text-[#A5161B] transition"
@@ -62,7 +62,7 @@ const Footer = () => {
               href="https://wa.me/919407271262"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#A5161B] flex items-center gap-2 transition"
+              className="hover:text-[#A5161B] flex items-center gap-2 transition text-[#555]"
             >
               <span>💬</span> Chat on WhatsApp
             </a>
@@ -79,7 +79,7 @@ const Footer = () => {
             <iframe
               title="studio-map"
               src="https://www.google.com/maps?q=E-7%20Arera%20Colony%20Bhopal&output=embed"
-              className="w-full h-full rounded-xl border border-[#E6E6E6]"
+              className="w-full h-full rounded-xl border border-[#ddd]"
               allowFullScreen
               loading="lazy"
             ></iframe>
@@ -89,7 +89,7 @@ const Footer = () => {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="mt-10 text-center border-t border-[#E6E6E6] pt-4 text-xs sm:text-sm">
+      <div className="mt-10 text-center border-t border-[#ddd] pt-4 text-xs sm:text-sm text-[#555]">
         © {new Date().getFullYear()} Maa Vaishnavi Entertainments. All Rights Reserved.
       </div>
 

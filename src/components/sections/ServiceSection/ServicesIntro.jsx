@@ -3,11 +3,10 @@ import React from "react";
 const ServicesIntro = () => {
   return (
     <section
-      className="w-full bg-[#1A1A1A]
+      className="w-full bg-[#f7f7f7]
                  pt-28 sm:pt-20 md:pt-24
                  pb-16 sm:pb-20
-                 px-4 sm:px-6
-                 text-white"
+                 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -17,22 +16,37 @@ const ServicesIntro = () => {
             OUR SERVICES
           </h2>
 
-          <p className="text-[#E6E6E6] leading-7 mb-4 text-sm sm:text-base">
+          <p className="text-[#555] leading-7 mb-4 text-sm sm:text-base">
             Maa Vaishnavi Entertainments delivers end-to-end production solutions
             for films, web series, TV serials, commercials, and documentaries.
           </p>
 
-          <p className="text-[#E6E6E6] leading-7 mb-4 text-sm sm:text-base">
+          <p className="text-[#555] leading-7 mb-4 text-sm sm:text-base">
             Our experienced team manages every detail — from location scouting,
             permits, and equipment to professional crew and logistics.
           </p>
 
-          <ul className="mt-6 space-y-3 text-[#E6E6E6] text-sm sm:text-base">
-            <li>• Line Production & Casting</li>
-            <li>• Location Scouting & Permits</li>
-            <li>• Camera, Lights & Equipment</li>
-            <li>• Production Crew Management</li>
-            <li>• Studio & Outdoor Shoot Support</li>
+          <ul className="mt-6 space-y-3 text-[#555] text-sm sm:text-base">
+            <li className="flex gap-2">
+              <span className="text-[#A5161B] font-semibold">•</span>
+              <span>Line Production & Casting</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#A5161B] font-semibold">•</span>
+              <span>Location Scouting & Permits</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#A5161B] font-semibold">•</span>
+              <span>Camera, Lights & Equipment</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#A5161B] font-semibold">•</span>
+              <span>Production Crew Management</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-[#A5161B] font-semibold">•</span>
+              <span>Studio & Outdoor Shoot Support</span>
+            </li>
           </ul>
         </div>
 

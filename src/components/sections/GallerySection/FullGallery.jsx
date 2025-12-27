@@ -2,7 +2,7 @@ import React from "react";
 
 const FullGallery = ({ images, onClose }) => {
   return (
-    <section className="w-full bg-[#1A1A1A] py-20 px-4 text-white">
+    <section className="w-full bg-[#f7f7f7] py-20 px-4 text-[#111]">
 
       <div className="max-w-7xl mx-auto">
 
@@ -25,14 +25,19 @@ const FullGallery = ({ images, onClose }) => {
         {/* Images Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((img, i) => (
-            <img
+            <div
               key={i}
-              src={img}
-              alt=""
-              loading="lazy"
-              className="w-full h-64 object-contain rounded-xl
-                         hover:scale-[1.03] transition"
-            />
+              className="bg-white rounded-xl overflow-hidden
+                         shadow-sm hover:shadow-lg transition"
+            >
+              <img
+                src={img}
+                alt=""
+                loading="lazy"
+                className="w-full h-64 object-contain
+                           hover:scale-[1.03] transition duration-300"
+              />
+            </div>
           ))}
         </div>
 

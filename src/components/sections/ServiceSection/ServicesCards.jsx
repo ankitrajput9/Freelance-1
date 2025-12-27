@@ -74,11 +74,11 @@ const services = [
 
 const ServicesCards = () => {
   return (
-    <section className="w-full bg-[#1A1A1A] py-16 sm:py-20 px-4 text-white">
+    <section className="w-full bg-[#f7f7f7] py-16 sm:py-20 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <h3 className="text-center text-[#A5161B] text-3xl tracking-[0.15em] mb-12">
+        <h3 className="text-center text-[#A5161B] text-3xl sm:text-4xl tracking-[0.15em] mb-12">
           WHAT WE OFFER
         </h3>
 
@@ -87,7 +87,9 @@ const ServicesCards = () => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="group bg-[#000000] border border-[#E6E6E6] p-8 rounded-xl
+              className="group bg-white border border-[#ddd] p-8 rounded-xl
+                         shadow-sm hover:shadow-xl
+                         hover:-translate-y-2
                          transition-all duration-300"
             >
               {/* Icon */}
@@ -97,7 +99,7 @@ const ServicesCards = () => {
 
               {/* Title */}
               <h4
-                className="text-lg font-semibold mb-2 text-white
+                className="text-lg font-semibold mb-2 text-[#111]
                            transition-colors duration-300
                            group-hover:text-[#A5161B]"
               >
@@ -105,7 +107,7 @@ const ServicesCards = () => {
               </h4>
 
               {/* Description */}
-              <p className="text-[#E6E6E6] text-sm leading-7">
+              <p className="text-[#555] text-sm leading-7">
                 {service.desc}
               </p>
             </div>
