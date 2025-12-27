@@ -102,7 +102,7 @@ const ContactUs = () => {
             {/* GOOGLE reCAPTCHA */}
             <div className="flex justify-center">
               <ReCAPTCHA
-                sitekey="6LcyKDgsAAAAAFm9hlvsUgTgF1WXjAKi2_2BMQGW"
+                sitekey="6LfZLjgsAAAAAHfJowv8QvA11rLQswVQh4W_z1fk"
                 onChange={(value) => setCaptchaVerified(!!value)}
                 theme="dark"
               />
