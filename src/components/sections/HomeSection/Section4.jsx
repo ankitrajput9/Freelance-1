@@ -1,45 +1,50 @@
-import React from 'react';
-import { services } from "../../data/Data";
-import { useNavigate } from 'react-router';
+import React from "react";
+import { servicesData } from "../../data/Data";
 
 const Section4 = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="w-full py-20 bg-[#1A1A1A] text-white">
 
       {/* Heading */}
-      <h2 className="text-center text-[#A5161B] text-3xl tracking-[0.15em] mb-4">
-        TYPE OF SERVICES
+      <h2 className="text-center text-[#A5161B] text-3xl sm:text-4xl tracking-[0.15em] mb-4">
+        CORE SERVICES
       </h2>
 
-      {/* Sub text */}
-      <p className="text-center text-[#E6E6E6] mb-12">
-        Click any service to view full gallery
+      {/* Subheading */}
+      <p className="text-center text-gray-400 mb-14 tracking-wide max-w-3xl mx-auto">
+        Professional line production, casting & production management services
+        tailored for films, web series, ads, documentaries & corporate projects.
       </p>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-        {services.map((service) => (
+      {/* Service Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
+
+        {servicesData.map((service, index) => (
           <div
-            key={service.id}
-            onClick={() => navigate(`/works/${service.id}`)}
-            className="cursor-pointer bg-[#000000] rounded-2xl overflow-hidden
-                       shadow-lg hover:scale-[1.03] transition"
+            key={index}
+            className="group bg-[#0f1113] border border-[#2a2a2a] rounded-2xl p-8
+                       hover:border-[#A5161B] hover:-translate-y-2
+                       transition-all duration-300 shadow-lg"
           >
-            {/* Preview image */}
-            <img
-              src={service.images[0]}
-              alt={service.title}
-              className="h-56 w-full object-cover"
-            />
+            {/* Icon Circle */}
+            <div className="w-14 h-14 flex items-center justify-center rounded-full 
+                            bg-[#A5161B]/10 text-[#A5161B] mb-6 text-2xl mx-auto">
+              {/* Placeholder icon using text (replace later if needed) */}
+              ★
+            </div>
 
             {/* Title */}
-            <h3 className="text-center py-4 text-lg tracking-wide text-white">
+            <h3 className="text-center text-lg font-semibold tracking-wide mb-3">
               {service.title}
             </h3>
+
+            {/* Description */}
+            <p className="text-center text-sm text-gray-400 leading-6">
+              {service.desc}
+            </p>
           </div>
         ))}
+
       </div>
 
     </section>

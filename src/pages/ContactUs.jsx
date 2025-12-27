@@ -1,172 +1,132 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
-const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    reset,
-    formState: { errors },
-  } = useForm();
+const ContactUs = () => {
+  const [captchaVerified, setCaptchaVerified] = useState(false);
 
-  const name = watch("name");
-  const email = watch("email");
-  const phone = watch("phone");
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const isButtonActive = name && (email || phone);
+    if (!captchaVerified) {
+      alert("Please verify that you are not a robot.");
+      return;
+    }
 
-  const onSubmit = (data) => {
-    console.log("Contact Form Data:", data);
-    reset();
+    alert("Form submitted successfully!");
+    // TODO: API / Email integration
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#1A1A1A] py-20 px-4 text-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <section className="min-h-screen bg-[#0f1113] text-white px-4 py-24">
+      <div className="max-w-6xl mx-auto">
 
-        {/* ================= LEFT : CONTACT DETAILS ================= */}
-        <div className="space-y-6">
+        {/* Heading */}
+        <h1 className="text-center text-4xl tracking-[0.15em] text-[#A5161B] mb-4">
+          CONTACT US
+        </h1>
+        <p className="text-center text-gray-400 mb-14">
+          Let’s discuss your project and bring your vision to life
+        </p>
 
-          {/* COMPANY INFO */}
-          <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-[#A5161B]">
-              📍 MAA VAISHNAVI ENTERTAINMENTS
-            </h3>
-            <p className="text-sm text-[#E6E6E6] leading-6">
-              Plot No. 120 Flat No. G-2 Park View Apartment,  
-              Lalalajpatray Society Near by Hanuman Mandir,  
-              E-7 Arera Colony, Bhopal,  
-              Madhya Pradesh 462016, India
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          {/* LEFT — CONTACT INFO */}
+          <div className="space-y-6">
+            <h2 className="text-2xl text-[#A5161B] mb-4">Get In Touch</h2>
+
+            <p className="text-gray-300 leading-7 text-sm sm:text-base">
+              Maa Vaishnavi Entertainments is your trusted partner for line
+              production, casting, and production management across India.
             </p>
-          </div>
 
-          {/* PHONE */}
-          <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-[#A5161B]">
-              📞 Phone
-            </h3>
-            <a
-              href="tel:+919407271262"
-              className="text-[#E6E6E6] hover:text-[#A5161B] transition"
-            >
-              +91 9407271262
-            </a>
-          </div>
-
-          {/* EMAIL */}
-          <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2 flex items-center gap-2 text-[#A5161B]">
-              ✉ Email
-            </h3>
-            <a
-              href="mailto:maavaishnavientertainments@gmail.com"
-              className="text-[#E6E6E6] hover:text-[#A5161B] transition break-all"
-            >
-              maavaishnavientertainments@gmail.com
-            </a>
-          </div>
-
-          {/* MAP */}
-          <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-4">
-            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-[#A5161B]">
-              📍 Office Location
-            </h3>
-
-            <iframe
-              title="office-map"
-              src="https://www.google.com/maps?q=E-7%20Arera%20Colony%20Bhopal&output=embed"
-              className="w-full h-64 rounded-lg border border-[#E6E6E6]"
-              loading="lazy"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-        </div>
-
-        {/* ================= RIGHT : CONTACT FORM ================= */}
-        <div className="bg-[#000000] border border-[#E6E6E6] rounded-xl p-8 shadow-xl">
-
-          <h2
-            className="text-center text-[#A5161B] text-3xl
-                       font-light tracking-[0.15em] mb-8"
-          >
-            CONTACT US
-          </h2>
-
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-
-            {/* NAME */}
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                {...register("name", { required: "Name is required" })}
-                className="w-full bg-transparent border border-[#E6E6E6]
-                           px-4 py-3 rounded-md
-                           focus:border-[#A5161B]
-                           outline-none text-[#E6E6E6]"
-              />
-              {errors.name && (
-                <p className="text-[#A5161B] text-sm mt-1">
-                  {errors.name.message}
-                </p>
-              )}
+            <div className="space-y-3 text-sm sm:text-base">
+              <p>📧 maavaishnavientertainments@gmail.com</p>
+              <p>📞 +91 94072 71262</p>
+              <p>🌐 www.filmsmp.com</p>
             </div>
+          </div>
 
-            {/* EMAIL */}
+          {/* RIGHT — CONTACT FORM */}
+          <form
+            onSubmit={handleSubmit}
+            className="bg-[#1A1A1A] border border-[#2a2a2a] rounded-2xl p-8 space-y-6"
+          >
+            <input
+              type="text"
+              placeholder="Your Name"
+              required
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
+            />
+
             <input
               type="email"
               placeholder="Email Address"
-              {...register("email")}
-              className="w-full bg-transparent border border-[#E6E6E6]
-                         px-4 py-3 rounded-md
-                         focus:border-[#A5161B]
-                         outline-none text-[#E6E6E6]"
+              required
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
             />
 
-            {/* PHONE */}
             <input
               type="tel"
               placeholder="Phone Number"
-              {...register("phone")}
-              className="w-full bg-transparent border border-[#E6E6E6]
-                         px-4 py-3 rounded-md
-                         focus:border-[#A5161B]
-                         outline-none text-[#E6E6E6]"
+              required
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
             />
 
-            {/* MESSAGE */}
+            <input
+              type="text"
+              placeholder="Company Name (Optional)"
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
+            />
+
+            <select
+              required
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
+            >
+              <option value="">Project Type</option>
+              <option>Film</option>
+              <option>Web Series</option>
+              <option>TV Show</option>
+              <option>Ad Film</option>
+              <option>Documentary</option>
+              <option>Corporate</option>
+              <option>Other</option>
+            </select>
+
             <textarea
               rows="4"
-              placeholder="Your Message"
-              {...register("message")}
-              className="w-full bg-transparent border border-[#E6E6E6]
-                         px-4 py-3 rounded-md resize-none
-                         focus:border-[#A5161B]
-                         outline-none text-[#E6E6E6]"
+              placeholder="Tell us about your project"
+              required
+              className="w-full bg-transparent border border-gray-600 px-4 py-3 rounded outline-none"
             ></textarea>
 
-            {/* SUBMIT BUTTON */}
+            {/* GOOGLE reCAPTCHA */}
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                sitekey="6LcyKDgsAAAAAFm9hlvsUgTgF1WXjAKi2_2BMQGW"
+                onChange={(value) => setCaptchaVerified(!!value)}
+                theme="dark"
+              />
+            </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              disabled={!isButtonActive}
-              className={`w-full py-3 rounded-md tracking-widest transition
+              disabled={!captchaVerified}
+              className={`w-full py-3 tracking-wider transition
                 ${
-                  isButtonActive
-                    ? "bg-[#A5161B] text-white hover:bg-[#7C1215]"
-                    : "bg-[#1A1A1A] text-[#E6E6E6] cursor-not-allowed"
+                  captchaVerified
+                    ? "border border-[#A5161B] hover:bg-[#A5161B]"
+                    : "border border-gray-600 cursor-not-allowed opacity-50"
                 }`}
             >
               SUBMIT
             </button>
-
           </form>
-        </div>
 
+        </div>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default ContactUs;

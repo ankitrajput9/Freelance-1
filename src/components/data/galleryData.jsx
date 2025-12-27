@@ -1,54 +1,10 @@
- export const images = [
-  // gallery1.png → gallery10.png
-//   ...Array.from({ length: 10 }, (_, i) => `/slider/gallery${i + 1}.png`),
-
-  // img5.jpg → img44.jpg
-  ...Array.from({ length: 40 }, (_, i) => `/slider/img${i + 5}.jpg`),
-];
-
-
-// NAVBAR
-export const navItems = [
-  { path: "/", label: "HOME" },
-  { path: "/about", label: "ABOUT" },
-  { path: "/services", label: "SERVICES" },
-  { path: "/gallery", label: "GALLERY" },
-  { path: "/career", label: "CAREER" },
-  { path: "/contact", label: "CONTACT" },
-];
-
-// SERVICES
-export const servicesData = [
+export const galleryData = [
   {
-    title: "Line Production",
-    desc: "Complete production management including crew, logistics and scheduling.",
-    icon: "camera",
-  },
-  {
-    title: "Location Scouting",
-    desc: "Indoor & outdoor location scouting with full permissions.",
-    icon: "location",
-  },
-  {
-    title: "Camera & Equipment",
-    desc: "Professional cameras, lights, grips and studio setup.",
-    icon: "equipment",
-  },
-  {
-    title: "Casting & Talent",
-    desc: "Casting services for films, TV serials and ads.",
-    icon: "casting",
-  },
-];
-
-
-
-export let services = [
-   {
-    id: "service-1",
-    title: "City",
+    id: "city-locations",
+    title: "City Locations",
+    category: "Locations",
     images: [
-      "/CityImg/city.jpg",
+     "/CityImg/city.jpg",
       "/CityImg/city1.jpg",
       "/CityImg/city2.jpg",
       "/CityImg/city3.jpg",
@@ -63,12 +19,12 @@ export let services = [
       "/CityImg/city13.jpg",
       "/CityImg/city14.jpg",
       "/CityImg/city15.jpg",
-
     ],
   },
   {
-    id: "service-2",
-    title: "Location",
+    id: "outdoor-locations",
+    title: "Outdoor Locations",
+    category: "Locations",
     images: [
       "/LocationImg/Location.jpg",
       "/LocationImg/Location2.jpg",
@@ -103,8 +59,9 @@ export let services = [
     ],
   },
   {
-    id: "service-3",
-    title: "Movies",
+    id: "feature-films",
+    title: "Feature Films",
+    category: "Films",
     images: [
       "/movies/im4.jpg",
       "/movies/im1.jpg",
@@ -135,15 +92,14 @@ export let services = [
   "/movies/im26.jpg",
   "/movies/im27.jpg",
   "/movies/im28.jpg",
-
-     
     ],
   },
   {
-    id: "service-4",
-    title: "TV Commercial",
+    id: "tv-commercials",
+    title: "TV Commercials",
+    category: "Ads",
     images: [
-      "/TvSerialImg/im29.jpg",
+        "/TvSerialImg/im29.jpg",
   "/TvSerialImg/im30.jpg",
   "/TvSerialImg/im31.jpg",
   "/TvSerialImg/im32.jpg",
@@ -164,11 +120,12 @@ export let services = [
   "/TvSerialImg/im47.jpg",
     ],
   },
-{
-id: "service-5",
-title: "Web series",
-images: [
-"/WebImg/tvSe8.jpg",
+  {
+    id: "web-series",
+    title: "Web Series",
+    category: "Web Series",
+    images: [
+      "/WebImg/tvSe8.jpg",
 "/WebImg/tvSe1.jpg",
 "/WebImg/tvSe2.jpg",
 "/WebImg/tvSe3.jpg",
@@ -180,17 +137,14 @@ images: [
 "/WebImg/tvSe10.jpg",
 "/WebImg/tvSe11.jpg",
 "/WebImg/tvSe12.jpg",
-
-
-
-
-],
-},
-{
-id: "service-6",
-title: "Corporate Film",
-images: [
-"/BrccCastingImg/im3.jpg",
+    ],
+  },
+  {
+    id: "corporate-films",
+    title: "Corporate Films",
+    category: "Corporate",
+    images: [
+    "/BrccCastingImg/im3.jpg",
   "/BrccCastingImg/im4.jpg",
   "/BrccCastingImg/im5.jpg",
   "/BrccCastingImg/im6.jpg",
@@ -223,59 +177,6 @@ images: [
   "/BrccCastingImg/im33.jpg",
   "/BrccCastingImg/im34.jpg",
   "/BrccCastingImg/im35.jpg",
-  // "/BrccCastingImg/im36.jpg",
-  // "/BrccCastingImg/im37.jpg",
-  // "/BrccCastingImg/im38.jpg",
-  // "/BrccCastingImg/im39.jpg",
-  // "/BrccCastingImg/im40.jpg",
-  // "/BrccCastingImg/im41.jpg",
-  // "/BrccCastingImg/im42.jpg",
-  // "/BrccCastingImg/im43.jpg",
-  // "/BrccCastingImg/im44.jpg",
-  // "/BrccCastingImg/im45.jpg",
-  // "/BrccCastingImg/im46.jpg",
-  // "/BrccCastingImg/im47.jpg",
-  // "/BrccCastingImg/im48.jpg",
-  // "/BrccCastingImg/im49.jpg",
-  // "/BrccCastingImg/im50.jpg",
-  // "/BrccCastingImg/im51.jpg",
-  // "/BrccCastingImg/im52.jpg",
-  // "/BrccCastingImg/im53.jpg",
-  // "/BrccCastingImg/im54.jpg",
-  // "/BrccCastingImg/im55.jpg",
-  // "/BrccCastingImg/im56.jpg",
-  // "/BrccCastingImg/im57.jpg",
-  // "/BrccCastingImg/im58.jpg",
-  // "/BrccCastingImg/im59.jpg",
-  // "/BrccCastingImg/im60.jpg",
-
-],
-},
-{
-id: "service-7",
-title: "Event Coverage",
-images: [
-"/images/s7-1.jpg",
-"/images/s7-2.jpg",
-"/images/s7-3.jpg",
-],
-},
-{
-id: "service-8",
-title: "Photography",
-images: [
-"/images/s8-1.jpg",
-"/images/s8-2.jpg",
-"/images/s8-3.jpg",
-],
-},
-{
-id: "service-9",
-title: "Post Production",
-images: [
-"/images/s9-1.jpg",
-"/images/s9-2.jpg",
-"/images/s9-3.jpg",
-],
-},
+    ],
+  },
 ];

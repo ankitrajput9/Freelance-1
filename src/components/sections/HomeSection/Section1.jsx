@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const Section1 = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
 
@@ -17,33 +20,41 @@ const Section1 = () => {
         controls={false}
       />
 
-      {/* Overlay (Charcoal Black + brand depth) */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-[#1A1A1A]/70"></div>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center">
 
-        <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold
-                     tracking-[0.15em] mb-6 text-white"
-        >
-          <span className="block">
-            MAA VAISHNAVI
-          </span>
-          <span className="block text-[#A5161B]">
-            ENTERTAINMENTS
-          </span>
+        {/* Brand Name */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.15em] mb-4 text-white">
+          <span className="block">MAA VAISHNAVI</span>
+          <span className="block text-[#A5161B]">ENTERTAINMENTS</span>
         </h1>
 
-        <p
-          className="text-center px-4 text-sm sm:text-base md:text-lg
-                     text-[#E6E6E6] font-[cursive] font-semibold max-w-3xl"
-        >
-          Founded in 2010 and based in Bhopal, Madhya Pradesh, Maa Vaishnavi
-          Entertainments has been a trusted partner for line production and
-          casting, offering end-to-end production services for over 15 years.
-          We pride ourselves on handling every aspect of production seamlessly.
+        {/* Main Service Heading */}
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#E6E6E6] max-w-4xl mb-4">
+          End-to-End Line Production, Casting & Production Management Services
+        </h2>
+
+        {/* Subheading */}
+        <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mb-6">
+          For Films, Web Series, TV Shows, Ads & Documentaries
         </p>
+
+        {/* Experience Line */}
+        <p className="text-xs sm:text-sm tracking-widest text-gray-400 mb-8">
+          Founded in 2010 | 15+ Years of Industry Experience
+        </p>
+
+        {/* CTA Button */}
+        <button
+          onClick={() => navigate("/contact")}
+          className="cursor-pointer  px-8 py-3 border border-[#A5161B] text-white uppercase tracking-wider
+                     hover:bg-[#A5161B] transition duration-300"
+        >
+          Discuss Your Project With Us
+        </button>
 
       </div>
     </section>
