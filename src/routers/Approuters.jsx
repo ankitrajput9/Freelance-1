@@ -9,6 +9,7 @@ import Services from '../pages/Services';
 import ServiceGallery from '../components/sections/HomeSection/ServiceGallery';
 import GalleryCategory from '../pages/GalleryCategory';
 import Projects from '../pages/Projects';
+import WorksGallery from '../pages/WorksGallery';
 
 const Approuters = () => {
   return (
@@ -30,6 +31,7 @@ const Approuters = () => {
 
       <Route path="/career" element={<Career />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/works/:serviceId" element={<WorksGallery />} />
     </Routes>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const FounderSection = () => {
   return (
-    <section className="w-full bg-[#f7f7f7] text-[#111] py-16 sm:py-20 md:py-24 px-4 sm:px-6">
+    <section className="w-full bg-white text-[#111] py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT — FOUNDER IMAGE */}
@@ -24,37 +24,47 @@ const FounderSection = () => {
             FOUNDER
           </h2>
 
-          <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-[#111]">
-            Mr. Bhupendra Rajput
+          <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#111]">
+            Bhupendra Rajput
           </h3>
 
-          <p className="text-[#A5161B] text-sm sm:text-base mb-4">
-            Founder & Managing Director
-          </p>
-
           <p className="text-[#555] text-sm sm:text-base leading-7 mb-4">
-            Mr. Bhupendra Rajput is the visionary founder of
+            Mr. Bhupendra Rajput, the visionary founder of{" "}
             <span className="text-[#A5161B] font-semibold">
-              {" "}Maa Vaishnavi Entertainments
-            </span>. With over 15 years of experience in the film and media
-            industry, he has played a key role in establishing the company
-            as a trusted name in line production, casting, and production
-            management across Madhya Pradesh and beyond.
+              Maa Vaishnavi Entertainments
+            </span>
+            , is the driving force behind the company’s success and credibility.
           </p>
 
           <p className="text-[#555] text-sm sm:text-base leading-7 mb-4">
-            His leadership, strong industry network, and deep understanding
-            of production workflows have helped successfully execute feature
-            films, web series, TV serials, commercials, and documentary projects.
-            He believes in professionalism, transparency, and delivering quality
-            at every stage of production.
+            A passionate industry professional with an unstoppable “can-do”
+            attitude, he is known for his commitment, resilience, and ability
+            to deliver results even under the most demanding production
+            conditions. Starting his career as a teenager, he rose through the
+            ranks with sheer determination, hard work, and an unshakeable belief
+            in excellence.
           </p>
 
-          <p className="text-[#555] text-sm sm:text-base leading-7">
-            Under his guidance, Maa Vaishnavi Entertainments continues to
-            grow as a reliable production partner, supporting filmmakers
-            with creative solutions and operational excellence.
+          <p className="text-[#555] text-sm sm:text-base leading-7 mb-6">
+            With extensive experience as a casting director and line producer,
+            he has played a crucial role in discovering, mentoring, and managing
+            talent across numerous successful films, web series, and television
+            projects. His deep industry insight, strong networks, and relentless
+            drive make him the heart and soul of Maa Vaishnavi Entertainments.
           </p>
+
+          {/* WhatsApp CTA */}
+          <a
+            href="https://wa.me/919407271262"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-[#A5161B]
+                       text-[#A5161B] px-6 py-3
+                       hover:bg-[#A5161B] hover:text-white
+                       transition tracking-wide"
+          >
+            Connect on WhatsApp
+          </a>
         </div>
 
       </div>

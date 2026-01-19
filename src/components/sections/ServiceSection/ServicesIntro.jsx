@@ -17,14 +17,15 @@ const ServicesIntro = () => {
           </h2>
 
           <p className="text-[#555] leading-7 mb-4 text-sm sm:text-base">
-            Maa Vaishnavi Entertainments delivers end-to-end production solutions
-            for films, web series, TV serials, commercials, and documentaries.
+           Professional Line Production, Casting & Production Management Services
+
+At Maa Vaishnavi Entertainments, we provide end-to-end production support for films, web series, TV shows, ads, documentaries, and corporate projects. From planning to execution, our services are designed to ensure smooth operations, controlled budgets, and stress-free shoots across India.
           </p>
 
-          <p className="text-[#555] leading-7 mb-4 text-sm sm:text-base">
+          {/* <p className="text-[#555] leading-7 mb-4 text-sm sm:text-base">
             Our experienced team manages every detail — from location scouting,
             permits, and equipment to professional crew and logistics.
-          </p>
+          </p> */}
 
           <ul className="mt-6 space-y-3 text-[#555] text-sm sm:text-base">
             <li className="flex gap-2">

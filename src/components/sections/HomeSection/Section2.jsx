@@ -31,11 +31,11 @@ const Section2 = () => {
       >
         <p
           className="text-lg sm:text-xl md:text-2xl
-                     italic font-[cursive]
                      text-[#A5161B] leading-snug"
         >
-          Founded in 2010, delivering seamless line production & casting services
-          with professionalism, transparency, and creative discipline.
+         Founded in 2010 and based in Bhopal, Madhya Pradesh, Maa Vaishnavi Entertainments is a trusted name in line production, casting, and complete production management.
+With more than 15 years of industry experience
+
         </p>
       </div>
 
@@ -45,11 +45,17 @@ const Section2 = () => {
                    text-sm sm:text-base font-light
                    px-4 text-[#555]"
       >
-        Based in Bhopal, Madhya Pradesh, Maa Vaishnavi Entertainments is a trusted
-        line production, casting, and production management company with over
-        15 years of hands-on industry experience. We have successfully supported
-        feature films, OTT web series, television shows, ad films, documentaries,
-        and corporate productions across India.
+         we have successfully supported:
+•	Feature Films
+•	Web Series
+•	TV Serials & Reality Shows
+•	Commercials & Ad Films
+•	Documentaries
+•	Corporate & Industrial Films
+Our strength lies in our deep understanding of production workflows, strong local networks, and a highly professional crew. From location scouting and permissions to equipment, casting, logistics, and post-production support, we manage everything seamlessly — so you can focus on creativity.
+✨ We believe in creativity, discipline, and delivering excellence.
+🎯 Our mission is to bring your vision to life with quality, efficiency, and reliability.
+
         <br />
         <br />
         Our strength lies in our deep understanding of production workflows,

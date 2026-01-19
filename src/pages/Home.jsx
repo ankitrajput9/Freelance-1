@@ -4,6 +4,7 @@ import Section3 from '../components/sections/HomeSection/Section3';
 import Section1 from '../components/sections/HomeSection/Section1';
 import Section2 from '../components/sections/HomeSection/Section2';
 import Section4 from '../components/sections/HomeSection/Section4';
+import ExtendedHomeContent from '../components/sections/HomeSection/ExtendedHomeContent';
 
 
 const Home = () => {
@@ -24,6 +25,8 @@ const Home = () => {
 
       {/* SECTION 5 – SLIDING SERVICES */}
       <SlidingServices />
+
+      <ExtendedHomeContent/>
 
     </div>
   );

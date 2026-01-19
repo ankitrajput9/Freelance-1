@@ -6,35 +6,37 @@ const AboutSection1 = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT SIDE — CONTENT */}
-        <div>
-          <h2 className="text-[#A5161B] text-3xl sm:text-4xl font-light tracking-[0.15em] mb-6">
-            ABOUT US
-          </h2>
+       <div>
+  <h2 className="text-[#A5161B] text-3xl sm:text-4xl font-light tracking-[0.15em] mb-6">
+    ABOUT US
+  </h2>
 
-          <p className="text-sm sm:text-base leading-7 mb-4 text-[#555]">
-            Founded in 2010 and based in Bhopal, Madhya Pradesh,
-            <span className="text-[#A5161B] font-semibold">
-              {" "}Maa Vaishnavi Entertainments
-            </span>{" "}
-            is a trusted name in line production, casting, and complete
-            production management. With more than 15 years of industry experience,
-            we have successfully supported films, web series, TV serials,
-            commercials, documentaries, and corporate projects.
-          </p>
+  <p className="text-sm sm:text-base leading-7 mb-4 text-[#555]">
+    <span className="text-[#A5161B] font-semibold">
+      Maa Vaishnavi Entertainments
+    </span>{" "}
+    is a full-service line production, casting, and production management
+    company founded in 2010 and headquartered in Bhopal, Madhya Pradesh.
+  </p>
 
-          <p className="text-sm sm:text-base leading-7 mb-4 text-[#555]">
-            Our strength lies in our deep understanding of production workflows,
-            strong local networks, and a highly professional crew. From location
-            scouting and permissions to equipment, casting, and post-production
-            support — we handle everything seamlessly.
-          </p>
+  <p className="text-sm sm:text-base leading-7 mb-4 text-[#555]">
+    With 15+ years of hands-on industry experience, we have built a strong
+    reputation for delivering seamless, cost-effective, and professionally
+    managed productions across India. From large-scale feature films to web
+    series, television shows, advertisements, documentaries, and corporate
+    films, we act as a dependable on-ground partner—handling every operational
+    detail so creators can focus on storytelling.
+  </p>
 
-          <p className="text-sm sm:text-base leading-7 text-[#555]">
-            We believe in creativity, discipline, and delivering excellence.
-            Our mission is to bring your vision to life with quality, efficiency,
-            and reliability.
-          </p>
-        </div>
+  <p className="text-sm sm:text-base leading-7 mb-4 text-[#555]">
+    We combine creative sensitivity with operational discipline, ensuring that
+    every project is executed with precision, transparency, and excellence.
+  </p>
+
+  <p className="text-sm sm:text-base leading-7 text-[#A5161B] font-semibold">
+    ✨ Creativity with discipline. Execution with integrity.
+  </p>
+</div>
 
         {/* RIGHT SIDE — IMAGE CARD */}
         <div className="relative">
