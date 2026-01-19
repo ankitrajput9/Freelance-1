@@ -78,12 +78,18 @@ const Footer = () => {
           <div className="w-full h-48 sm:h-56 md:h-60">
             <iframe
               title="studio-map"
-              src="https://www.google.com/maps?q=E-7%20Arera%20Colony%20Bhopal&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117345.96566905956!2d77.2918224334717!3d23.204431898895255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42436c327607%3A0x1c9518e28ba637!2sMAA%20VAISHNAVI%20ENTERTAINMENTS!5e0!3m2!1sen!2sin!4v1768797601288!5m2!1sen!2sin"
               className="w-full h-full rounded-xl border border-[#ddd]"
               allowFullScreen
               loading="lazy"
             ></iframe>
           </div>
+
+
+
+
+
+
         </div>
 
       </div>
